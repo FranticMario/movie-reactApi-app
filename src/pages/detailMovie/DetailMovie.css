@@ -1,0 +1,21 @@
+.movie__container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.detail__movie {
+    padding-top: 80px;
+    
+}
+
+.movie__content h1 {
+    font-size: 35px;
+
+}
+
+.movie__content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

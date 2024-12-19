@@ -35,7 +35,7 @@ const Header:React.FC<PropsSearch> = (props) => {
                     <input className="gate" id="class" type="search"
                         placeholder="Search movies..."
                         value={inputValue}
-                        onChange={(e) => setInputValue(e.target.value)} /><label for="class">Movies</label>
+                        onChange={(e) => setInputValue(e.target.value)} /><label  htmlFor="class">Movies</label>
 
                     <button className="btn" onClick={handleSearchClick}>Search</button>
                 </div>

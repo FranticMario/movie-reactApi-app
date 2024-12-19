@@ -9,15 +9,15 @@ import IMovie from './interfaces/IMovie'
 function App() {
   const [moviesList, setMoviesList] = useState<IMovie[]>([])
   const [search, setSearch] = useState<string>("")
-
+  console.log("API Key:", import.meta.env.VITE_API_KEY);
   useEffect(() => {
     const fetchMovies = async () => {
+      const apiKey = import.meta.env.VITE_API_KEY;
       const options = {
         method: "GET",
         headers: {
           accept: "application/json",
-          Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlOTNkZTU0ZDg5YjAxMDQ1NzZlMjk3ZTBjMDVjYTA0ZSIsIm5iZiI6MTczNDYxMDE1Ni44NTUsInN1YiI6IjY3NjQwY2VjNjdjOTYzMjE4MDRhNGU5NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.aVpERrLsnYLFtxUzNyhC2ahb-PetJad-pqb72DR1SnU",
+          Authorization: `Bearer ${apiKey}`,
         },
       };
 
